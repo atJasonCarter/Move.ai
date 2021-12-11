@@ -1,0 +1,87 @@
+body{
+    background-color: var(--grey1000);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 48px auto 60px;
+    column-gap: 12px;
+    row-gap: 12px;
+    grid-template-areas: 
+    "header header"
+    "content content"
+    "footer footer";
+}
+.header{
+display: flex;
+align-items: flex-end;
+padding: 0px 0px 12px 24px;
+grid-area: header;
+}
+
+.content{
+    grid-area: content;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 2.5fr 1fr 1fr;
+    grid-template-areas: 
+    "Main Main"
+    "Pain Pain"
+    "Mobility Mobility";
+    padding: 12px;
+    gap: 12px;
+}
+.main{
+
+    height: auto;
+    display: grid;
+    grid-template-areas: 
+    "calendar"
+    "details"
+    "start";
+    grid-template-rows: auto 48px 48px;
+    gap:12px;
+    background-color: var(--grey900);
+    padding: 12px;
+    border-radius: 12px;
+    grid-area: Main;
+}
+
+.card.calendar{
+    grid-area:calendar;
+}
+.details{
+    grid-area:details;
+}
+.button.start {
+display: flex;
+height:48px;
+width:100%;
+background: radial-gradient(100% 4416.71% at 0% 100%, #4A50E3 0%, #4A50E3 53.9%, #40ACE4 100%);
+justify-content: center;
+align-items: center;
+border-radius: 12px;
+color:white;
+grid-area:start;
+transition: all 1s;
+}
+
+.button.start:hover{
+transform: scale(1.015);
+background: radial-gradient(100% 4416.71% at 0% 100%, #4A50E3 0%, #4A50E3 48.9%, #40ACE4 100%);
+}
+   
+
+.chart{
+    background-color: var(--grey900);
+    width: 100%;
+    height: auto;
+    min-height: 32px;
+    border-radius: 12px;
+}
+
+.pain{
+    grid-area: Pain;
+}
+.mobility{
+    grid-area: Mobility;
+}
