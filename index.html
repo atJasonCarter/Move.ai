@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/font.css">
     <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="/css/charts.min.css"> <!-- https://chartscss.org/docs/installation/ -->
+
 
  
 
@@ -48,8 +50,45 @@
                     <p>Lower body, abdomen</p>
                 </div>
         </div>
-        <div class="chart pain"></div>
-        <div class="chart mobility"></div>
+        <!-- For tracking pain on a daily basis -->
+        <div class="chartContainer pain">
+            <div class="titleRow">
+                <p class="cardHeader"> Pain</p>
+             </div>
+             <!-- add a new Chart metric -->
+            <div class="addNewContainer">
+                <button class="addNew">+</button>
+            </div>
+            <!-- <div class="avgRow">
+                <div class="subtitle">Avg 6.2</div>
+            </div>
+            <div class="currentNumberContainer">
+                <div class="currentNum">8</div>
+            </div> -->
+            <div class="chartRow">
+                <table class="charts-css line" id="painChart"></table>
+            </div>
+        </div>
+
+        <!-- Mobility Chart -->
+        <div class="chartContainer mobility">
+            <div class="titleRow">
+                <p class="cardHeader"> Mobility</p>
+             </div>
+             <!-- add a new Chart metric -->
+            <div class="addNewContainer">
+                <button class="addNew">+</button>
+            </div>
+            <!-- <div class="avgRow">
+                <div class="subtitle">Avg 6.2</div>
+            </div>
+            <div class="currentNumberContainer">
+                <div class="currentNum">8</div>
+            </div> -->
+            <div class="chartRow">
+                <table class="charts-css line" id="mobiChart"></table>
+            </div>
+        </div>
     </div>
     <div class="footerNav">
 

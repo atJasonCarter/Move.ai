@@ -1,6 +1,7 @@
 body{
     background-color: var(--grey1000);
-    height: 100vh;
+    max-height: 100vh;
+    height:auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 48px auto 60px;
@@ -71,12 +72,40 @@ background: radial-gradient(100% 4416.71% at 0% 100%, #4A50E3 0%, #4A50E3 48.9%,
 }
    
 
-.chart{
+.chartContainer{
     background-color: var(--grey900);
     width: 100%;
     height: auto;
     min-height: 32px;
     border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 24px auto; /*24px 19px auto*/
+    padding-top: 12px;
+    gap: 4px;
+}
+.titleRow{
+    padding-left: 12px;
+}
+.addNewContainer{
+    display: flex;
+    padding-right: 12px;
+    align-items: end;
+    justify-content: end;
+}
+.addNew{
+    height:24px;
+    width: 48px;
+    color: var(--blue200);
+    background-color: var(--blue600);
+    font-size: 24px;
+    padding-top: -2px;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .pain{

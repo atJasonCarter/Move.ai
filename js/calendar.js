@@ -15,7 +15,7 @@ function renderCalendar(){
     
     calendarDays.innerHTML = "";
 
-    let totalCalendarDay = 6 * 7;
+    let totalCalendarDay = 5 * 7; //set to 1 for 1 row
     for (let i = 0; i < totalCalendarDay; i++) {
         let day = i-startWeekDay;
 
