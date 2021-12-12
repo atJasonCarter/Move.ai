@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
 :root {
-  --color-accent: rgb(112, 71, 235);
+  --color-accent: var(--blue500);
   --background-color: #f8f7fa;
   --foreground-color: #ffffff;
   --text-color: #19181a;
@@ -18,8 +18,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #19181a;
-    --foreground-color: #282729;
+    --background-color: var(--grey1000);
+    --foreground-color: var(--grey1000);
     --text-color: #c9c8cc;
     --highlight-text-color: #f8f7fa;
     --inactive-text-color: #68676a;

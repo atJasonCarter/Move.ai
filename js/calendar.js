@@ -11,7 +11,7 @@ renderCalendar();
 function renderCalendar(){
     const prevLastDay = new Date(date.getFullYear(),date.getMonth(),0).getDate();
     const totalMonthDay = new Date(date.getFullYear(),date.getMonth()+1,0).getDate();
-    const startWeekDay = new Date(date.getFullYear(),date.getMonth(),1).getDay();
+    const startWeekDay = new Date(date.getFullYear(),date.getMonth(),+1).getDay();
     
     calendarDays.innerHTML = "";
 
@@ -21,7 +21,7 @@ function renderCalendar(){
 
         if(i <= startWeekDay){
             // adding previous month days
-            calendarDays.innerHTML += `<div class='padding-day'>${prevLastDay-i}</div>`;
+             calendarDays.innerHTML += `<div class='padding-day'>${prevLastDay-i}</div>`;
         }else if(i <= startWeekDay+totalMonthDay){
             // adding this month days
             date.setDate(day);
@@ -35,28 +35,28 @@ function renderCalendar(){
         }
     }
 }
+// Change calnedar date, removed functionality for now
+// document.querySelectorAll(".month-btn").forEach(function (element) {
+//	element.addEventListener("click", function () {
+//		date = new Date(currentMonth.textContent);
+//        date.setMonth(date.getMonth() + (element.classList.contains("prev") ? -1 : 1));
+//		currentMonth.textContent = date.toLocaleDateString("en-US", {month:'long', year:'numeric'});
+//		renderCalendar();
+//	});
+//});
 
-document.querySelectorAll(".month-btn").forEach(function (element) {
-	element.addEventListener("click", function () {
-		date = new Date(currentMonth.textContent);
-        date.setMonth(date.getMonth() + (element.classList.contains("prev") ? -1 : 1));
-		currentMonth.textContent = date.toLocaleDateString("en-US", {month:'long', year:'numeric'});
-		renderCalendar();
-	});
-});
-
-document.querySelectorAll(".btn").forEach(function (element) {
-	element.addEventListener("click", function () {
-        let btnClass = element.classList;
-        date = new Date(currentMonth.textContent);
-        if(btnClass.contains("today"))
-            date = new Date();
-        else if(btnClass.contains("prev-year"))
-            date = new Date(date.getFullYear()-1, 0, 1);
-        else
-            date = new Date(date.getFullYear()+1, 0, 1);
+//document.querySelectorAll(".btn").forEach(function (element) {
+//	element.addEventListener("click", function () {
+//        let btnClass = element.classList;
+//        date = new Date(currentMonth.textContent);
+//        if(btnClass.contains("today"))
+//            date = new Date();
+//        else if(btnClass.contains("prev-year"))
+//            date = new Date(date.getFullYear()-1, 0, 1);
+//        else
+//            date = new Date(date.getFullYear()+1, 0, 1);
         
-		currentMonth.textContent = date.toLocaleDateString("en-US", {month:'long', year:'numeric'});
-		renderCalendar();
-	});
-});
+//		currentMonth.textContent = date.toLocaleDateString("en-US", {month:'long', year:'numeric'});
+//		renderCalendar();
+//	});
+//});

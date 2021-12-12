@@ -1,7 +1,24 @@
 :root{
     --grey1000: #070b17;
     --grey900: #171b30;
+    --grey800:#25293E;
    --grey200: #B8C1CC;
    --blue600:#333FA3;
    --blue200:#94BAFF;
+   --blue500:#4A50E3;
+   --green500: #70D383;
+   --green600: #29B96E;
+   --green700: #199B63;
+   --orange500: #FFDC70;
+   --orange600: #FFAE3C;
+   --orange700: #FA6815;
+   --red500: #DB4002;
+   --red700: #CE2A20;
+   --red800: #C40F00;
+   --red900: #D53510;
+
+   
+
+
+
 }
