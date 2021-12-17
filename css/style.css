@@ -1,6 +1,7 @@
 body{
     background-color: var(--grey1000);
     max-height: 100vh;
+    max-width: 550px;
     height:auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
