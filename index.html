@@ -1,186 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Move.ai</title>
-    <link rel="stylesheet" href="./css/charts.min.css"> <!-- https://chartscss.org/docs/installation/ -->
-    <link rel="stylesheet" href="./css/colors.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./css/calendar.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Move.ai</title>
+  <link rel="stylesheet" href="./css/charts.min.css"> <!-- https://chartscss.org/docs/installation/ -->
+  <link rel="stylesheet" href="./css/colors.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/calendar.css">
+  <link href="https://tools.aftertheflood.com/sparks/styles/font-faces.css" rel="stylesheet" />
 
 
 
- 
+
+
 
 </head>
+
 <body>
+  <div class="bodyMain">
     <!-- popover modal to chart pain -->
     <div class="modal pain" id="modalPain">
-        <div class="numContainer">
-            <div class="number x"></div>
-            <div class="number 10" id="p10">10</div>
-            <div class="number x"></div>
-            <div class="number 7" id="p7"><p class="cardHeader">  7</p></div>
-            <div class="number 8" id="p8"><p class="cardHeader">  8</p></div>
-            <div class="number 9" id="p9"><p class="cardHeader">  9</p></div>
-            <div class="number 4" id="p4"><p class="cardHeader">  4</p></div>
-            <div class="number 5" id="p5"><p class="cardHeader">  5</p></div>
-            <div class="number 6" id="p6"><p class="cardHeader">  6</p></div>
-            <div class="number 1" id="p1"><p class="cardHeader">  1</p></div>
-            <div class="number 2" id="p2"><p class="cardHeader">  2</p></div>
-            <div class="number 3" id="p3"><p class="cardHeader">  3</p> </div>
-            <div class="close" id="modalClose"><p class="cardHeader"> Close</p></div>
-            <div class="log" id="pLog"><p class="cardHeader"> Submit</p></div>
+      <div class="numContainer">
+        <div class="number x"></div>
+        <div class="number 10" id="p10">10</div>
+        <div class="number x"></div>
+        <div class="number 7" id="p7">
+          <p class="cardHeader"> 7</p>
         </div>
+        <div class="number 8" id="p8">
+          <p class="cardHeader"> 8</p>
+        </div>
+        <div class="number 9" id="p9">
+          <p class="cardHeader"> 9</p>
+        </div>
+        <div class="number 4" id="p4">
+          <p class="cardHeader"> 4</p>
+        </div>
+        <div class="number 5" id="p5">
+          <p class="cardHeader"> 5</p>
+        </div>
+        <div class="number 6" id="p6">
+          <p class="cardHeader"> 6</p>
+        </div>
+        <div class="number 1" id="p1">
+          <p class="cardHeader"> 1</p>
+        </div>
+        <div class="number 2" id="p2">
+          <p class="cardHeader"> 2</p>
+        </div>
+        <div class="number 3" id="p3">
+          <p class="cardHeader"> 3</p>
+        </div>
+        <div class="close" id="modalClose">
+          <p class="cardHeader"> Close</p>
+        </div>
+        <div class="log" id="pLog">
+          <p class="cardHeader"> Submit</p>
+        </div>
+      </div>
     </div>
 
-<!-- modal to Mobility Chart -->
+    <!-- modal to Mobility Chart -->
 
-<div class="modal pain" id="modalMobility">
-  <div class="numContainer">
-      <div class="number x"></div>
-      <div class="number 10" id="m10">10</div>
-      <div class="number x"></div>
-      <div class="number 7" id="m7"><p class="cardHeader">  7</p></div>
-      <div class="number 8" id="m8"><p class="cardHeader">  8</p></div>
-      <div class="number 9" id="m9"><p class="cardHeader">  9</p></div>
-      <div class="number 4" id="m4"><p class="cardHeader">  4</p></div>
-      <div class="number 5" id="m5"><p class="cardHeader">  5</p></div>
-      <div class="number 6" id="m6"><p class="cardHeader">  6</p></div>
-      <div class="number 1" id="m1"><p class="cardHeader">  1</p></div>
-      <div class="number 2" id="m2"><p class="cardHeader">  2</p></div>
-      <div class="number 3" id="m3"><p class="cardHeader">  3</p> </div>
-      <div class="close" id="modalClose"><p class="cardHeader"> Close</p></div>
-      <div class="log" id="mLog"><p class="cardHeader"> Submit</p></div>
-  </div>
-</div>
-
+    <div class="modal pain" id="modalMobility">
+      <div class="numContainer">
+        <div class="number x"></div>
+        <div class="number 10" id="m10">10</div>
+        <div class="number x"></div>
+        <div class="number 7" id="m7">
+          <p class="cardHeader"> 7</p>
+        </div>
+        <div class="number 8" id="m8">
+          <p class="cardHeader"> 8</p>
+        </div>
+        <div class="number 9" id="m9">
+          <p class="cardHeader"> 9</p>
+        </div>
+        <div class="number 4" id="m4">
+          <p class="cardHeader"> 4</p>
+        </div>
+        <div class="number 5" id="m5">
+          <p class="cardHeader"> 5</p>
+        </div>
+        <div class="number 6" id="m6">
+          <p class="cardHeader"> 6</p>
+        </div>
+        <div class="number 1" id="m1">
+          <p class="cardHeader"> 1</p>
+        </div>
+        <div class="number 2" id="m2">
+          <p class="cardHeader"> 2</p>
+        </div>
+        <div class="number 3" id="m3">
+          <p class="cardHeader"> 3</p>
+        </div>
+        <div class="close" id="modalClose">
+          <p class="cardHeader"> Close</p>
+        </div>
+        <div class="log" id="mLog">
+          <p class="cardHeader"> Submit</p>
+        </div>
+      </div>
+    </div>
 
 
 
 
     <div class="header">
-        <div class="logo"><img src="./images/logo.svg" alt="move AI logo" srcset=""></div>
+      <div class="logo"><img src="./images/logo.svg" alt="move AI logo" srcset=""></div>
     </div>
-    <div class="content"> 
-        <div class="main">
-                <div class="button start"><p class="cardHeader"> Start workout</p></div>
-
-                <!-- Calendar https://codepen.io/khalidsaifullahfuad/pen/eYEZNzX -->
-                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
-                    <div class="card calendar">
-                    <div class="calendar-toolbar">
-                        <!-- <button class="prev month-btn"><i class="fas fa-chevron-left"></i></button> -->
-                        <div class="current-month"></div>
-                        <!-- <button class="next month-btn"><i class="fas fa-chevron-right"></i></button> -->
-                    </div>
-                    <div class="calendar">
-                        <div class="weekdays">
-                        <div class="weekday-name">Sa</div>
-                        <div class="weekday-name">Su</div>
-                        <div class="weekday-name">Mo</div>
-                        <div class="weekday-name">Tu</div>
-                        <div class="weekday-name">We</div>
-                        <div class="weekday-name">Th</div>
-                        <div class="weekday-name">Fr</div>
-                        </div>
-                        <div class="calendar-days"></div>
-                    </div>
-           
-                </div>      
-                <div class="details">
-                    <p class="cardHeader"> Todays workout</p>
-                    <p>Lower body, abdomen</p>
-                </div>
+    <div class="content">
+      <div class="main">
+        <div class="button start">
+          <p class="cardHeader"> Start workout</p>
         </div>
-        <!-- For tracking pain on a daily basis -->
-        <div class="chartContainer pain">
-            <div class="titleRow">
-                <p class="cardHeader"> Pain</p>
-             </div>
-             <!-- add a new Chart metric -->
-            <div class="addNewContainer">
-                <button class="addNew" id="painAdd">+</button>
-            </div>
-            <!-- <div class="avgRow">
+
+        <!-- Calendar https://codepen.io/khalidsaifullahfuad/pen/eYEZNzX -->
+        <!-- commenting out calendar
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+      <div class="card calendar">
+        
+        <div class="calendar-toolbar">
+          <!-- <button class="prev month-btn"><i class="fas fa-chevron-left"></i></button> 
+          <div class="current-month"></div>
+          <!-- <button class="next month-btn"><i class="fas fa-chevron-right"></i></button> 
+        </div>
+        <div class="calendar">
+          <div class="weekdays">
+            <div class="weekday-name">Sa</div>
+            <div class="weekday-name">Su</div>
+            <div class="weekday-name">Mo</div>
+            <div class="weekday-name">Tu</div>
+            <div class="weekday-name">We</div>
+            <div class="weekday-name">Th</div>
+            <div class="weekday-name">Fr</div>
+          </div>
+          <div class="calendar-days"></div>
+        </div>
+      
+      </div>
+    End commenting out calendar-->
+        <h1>
+          Hello <span class="name" id="fName">Will</span> 👋
+        </h1>
+        <h4 class="counter"> Workouts 12</h4>
+
+        <script src="https://player.vimeo.com/api/player.js"></script>
+
+        <div class="weekCal">
+          <ul class="week">
+            <li class="su">S</li>
+            <li class="m">M</li>
+            <li class="tu">T </li>
+            <li class="w">W</li>
+            <li class="th">T</li>
+            <li class="f">F</li>
+            <li class="sa">S</li>
+          </ul>
+        </div>
+        <div class="details">
+          <div class="detailsHeader">
+            <p class="cardHeader"> Todays workout</p>
+            <p>
+              <script> document.write(new Date().toLocaleDateString()); </script>
+            </p>
+          </div>
+          <p>Lower body, abdomen</p>
+        </div>
+      </div>
+      <!-- For tracking pain on a daily basis -->
+      <div class="chartContainer pain">
+        <div class="titleRow">
+          <p class="cardHeader"> Pain</p>
+        </div>
+        <!-- add a new Chart metric -->
+        <div class="addNewContainer">
+          <button class="addNew" id="painAdd">+</button>
+        </div>
+        <!-- <div class="avgRow">
                 <div class="subtitle">Avg 6.2</div>
             </div>
             <div class="currentNumberContainer">
                 <div class="currentNum">8</div>
             </div> -->
-            <div class="chartRow">
-                <table class="charts-css line" id="painChart"></table>
-            </div>
+        <div class="chartRow">
+          <span class="barchart" id="painChart"> {40,10,20,30,60,50,100,0,0,0,0,0,0,0}</span>
         </div>
+      </div>
 
-        <!-- Mobility Chart -->
-        <div class="chartContainer mobility">
-            <div class="titleRow">
-                <p class="cardHeader"> Mobility</p>
-             </div>
-             <!-- add a new Chart metric -->
-            <div class="addNewContainer">
-                <button class="addNew" id="mobilityAdd">+</button>
-            </div>
-            <!-- <div class="avgRow">
+      <!-- Mobility Chart -->
+      <div class="chartContainer mobility">
+        <div class="titleRow">
+          <p class="cardHeader"> Mobility</p>
+        </div>
+        <!-- add a new Chart metric -->
+        <div class="addNewContainer">
+          <button class="addNew" id="mobilityAdd">+</button>
+        </div>
+        <!-- <div class="avgRow">
                 <div class="subtitle">Avg 6.2</div>
             </div>
             <div class="currentNumberContainer">
                 <div class="currentNum">8</div>
             </div> -->
-            <div class="chartRow">
-                <table class="charts-css line" id="mobiChart">
-                        <!-- static test data -->
-                        <tbody class="chart">
-                            <tr>
-                              <td style="--start: 0.0; --size: 0.4"> <span class="dot"> </span></td>
-                            </tr>
-                            <tr>
-                              <td style="--start: 0.4; --size: 0.2"><span class="dot"> </span></td>
-                            </tr>
-                            <tr>
-                              <td style="--start: 0.2; --size: 0.6"> <span class="dot"> </span></td>
-                            </tr>
-                            <tr>
-                              <td style="--start: 0.6; --size: 0.4"> <span class="dot"></td>
-                            </tr>
-                            <tr>
-                              <td style="--start: 0.4; --size: 0.8"> <span class="dot"> </span></td>
-                            </tr>
-                            <tr>
-                              <td style="--start: 0.8; --size: 0.6"> <span class="dot"> </span></td>
-                            </tr>
-                            <tr>
-                              <td style="--start: 0.6; --size: 0.0"> <span class="dot"> </span></td>
-                            </tr>
-                            <tr>
-                                <td style="--start: 0.0; --size: 0.4"> <span class="dot"> </span></td>
-                              </tr>
-                              <tr>
-                                <td style="--start: 0.4; --size: 0.2"><span class="dot"> </span></td>
-                              </tr>
-                              <tr>
-                                <td style="--start: 0.2; --size: 0.6"> <span class="dot"> </span></td>
-                              </tr>
-                              <tr>
-                                <td style="--start: 0.6; --size: 0.4"> <span class="dot"></td>
-                              </tr>
-                              <tr>
-                                <td style="--start: 0.4; --size: 0.8"> <span class="dot"> </span></td>
-                              </tr>
-                              <tr>
-                                <td style="--start: 0.8; --size: 0.6"> <span class="dot"> </span></td>
-                              </tr>
-                              <tr>
-                                <td style="--start: 0.6; --size: 1.0">  </span></td>
-                              </tr>
-                          </tbody>
-                </table>
-            </div>
+        <div class="chartRow">
+          <table class="charts-css line" id="mobiChart">
+            <!-- static test data -->
+            <tbody class="chart">
+              <tr>
+                <td style="--start: 0.0; --size: 0.4"> <span class="dot"> </span></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.2"><span class="dot"> </span></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.2; --size: 0.6"> <span class="dot"> </span></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.6; --size: 0.4"> <span class="dot"></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.8"> <span class="dot"> </span></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.8; --size: 0.6"> <span class="dot"> </span></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.6; --size: 0.0"> <span class="dot"> </span></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.0; --size: 0.4"> <span class="dot"> </span></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.2"><span class="dot"> </span></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.2; --size: 0.6"> <span class="dot"> </span></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.6; --size: 0.4"> <span class="dot"></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.4; --size: 0.8"> <span class="dot"> </span></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.8; --size: 0.6"> <span class="dot"> </span></td>
+              </tr>
+              <tr>
+                <td style="--start: 0.6; --size: 1.0"> </span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
+
     </div>
     <div class="footerNav">
 
@@ -190,39 +267,12 @@
 
 
 
-<script>
-    // Get the modal
-var modal = document.getElementById("modalPain");
-
-// Get the button that opens the modal
-var btn = document.getElementById("painAdd");
 
 
-// Get the <span> element that closes the modal
-var div = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "flex";
-}
-
-
-
-// When the user clicks on <span> (x), close the modal
-div.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-</script>
-
+    <script src="./js/calendar.js"></script>
+    <script src="./js/source.js"></script>
+  </div>
 
 </body>
-<script src="./js/calendar.js"></script>
+
 </html>

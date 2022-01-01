@@ -2,14 +2,14 @@
 
 :root {
   --color-accent: var(--blue500);
-  --background-color: #f8f7fa;
-  --foreground-color: #ffffff;
-  --text-color: #19181a;
+  --background-color: var(--grey1000);
+  --foreground-color: var(--grey1000);
+  --text-color: #fff;
   --highlight-text-color: var(--text-color);
   --active-text-color: #f8f7fa;
   --inactive-text-color: #a5a5a5;
-  --btn-bg: #f8f7fa;
-  --box-shadow: #efefef;
+  --btn-bg: var(--grey900);
+  --box-shadow: #111111;
 
   --border-width: 1px;
   --border-radius: 12px;
